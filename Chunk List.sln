@@ -5,13 +5,6 @@ VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chunk List", "Chunk List\Chunk List.csproj", "{9CB9B4AB-13B7-4409-A76F-5FDC629BCD27}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{78931C82-C124-4325-A59A-52218CA5368B}"
-	ProjectSection(SolutionItems) = preProject
-		C:\Users\Daniel\Desktop\Chunk List.pdf = C:\Users\Daniel\Desktop\Chunk List.pdf
-		..\..\..\Documents\Powerpoint\Chunk List.pptx = ..\..\..\Documents\Powerpoint\Chunk List.pptx
-		C:\Users\Daniel\Desktop\Chunk List.xps = C:\Users\Daniel\Desktop\Chunk List.xps
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
