@@ -1,6 +1,5 @@
 # About
 A Chunk List is a new, concurrent, chunk-based data structure that is easily modifiable and allows for fast run-time operations.
-__NOTE__: *A chunk size of 1/10th the amount of items in the list is generally ideal for speed and efficiency*
 
 # Usage
 The __Presentation__ folder contains a presentation in PDF, PowerPoint, and XPS formats, containing the following information:
