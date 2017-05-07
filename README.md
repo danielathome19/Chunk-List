@@ -1,5 +1,5 @@
 # About
-A Chunk List is a new, concurrent, chunk-based data structure that is easily modifiable and allows for fast runtime operations.
+A Chunk List is a new, concurrent, chunk-based data structure that is easily modifiable and allows for fast run-time operations.
 
 # Usage
 The __Presentation__ folder contains a presentation in PDF, PowerPoint, and XPS formats, containing the following information:
