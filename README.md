@@ -15,7 +15,7 @@ A full implementation of the class is kept within the __ChunkList.cs__ file in t
 The __Program.cs__ file contains a benchmark test for comparison between an ArrayList (List<T>) and Chunk List.
 
 # Bugs/Features
-Bugs are tracked using the Github Issue Tracker.
+Bugs are tracked using the GitHub Issue Tracker.
 
 Please use the issue tracker for the following purpose:
   * To raise a bug request; do include specific details and label it appropriately.
