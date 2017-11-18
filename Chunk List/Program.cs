@@ -252,7 +252,9 @@ namespace Chunk_List
             Console.WriteLine();
             Console.WriteLine();
 
-            Console.WriteLine("Sorted:");
+            Console.Write("Sorted:");
+            Console.WriteLine("[Elapsed time - Chunk List] Minutes: " + stopwatch.Elapsed.Minutes + " Seconds: " + stopwatch.Elapsed.Seconds + "." + stopwatch.Elapsed.Milliseconds);
+
             list.sort();
 
             list.remove(7);
@@ -280,11 +282,20 @@ namespace Chunk_List
             Console.WriteLine();
             Console.WriteLine();
 
-            Console.WriteLine("Sorted:");
+            Console.Write("Sorted:");
+            Console.WriteLine("[Elapsed time - Array List] Minutes: " + stopwatch2.Elapsed.Minutes + " Seconds: " + stopwatch2.Elapsed.Seconds + "." + stopwatch2.Elapsed.Milliseconds);
+
             list2.Sort();
 
             list2.Remove(7);
-            list2.RemoveAll(item => item == 3);
+
+            for (int i = 0; i < list2.Count; i++)
+            {
+                if (list2[i] == 3)
+                {
+                    list2.RemoveAt(i);
+                }
+            }
 
             stopwatch2.Stop();
 
