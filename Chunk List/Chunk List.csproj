@@ -82,6 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Presentation\Chunk List.docx" />
     <None Include="Presentation\Chunk List.pdf" />
     <None Include="Presentation\Chunk List.pptx" />
     <None Include="Presentation\Chunk List.xps" />
