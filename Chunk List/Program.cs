@@ -229,13 +229,16 @@ namespace Chunk_List
             var stopwatch = new Stopwatch();
             stopwatch.Start();
 
+            List<int> list2 = new List<int>();
             ChunkList<int> list = new ChunkList<int>(50000);
 
             Random rand = new Random();
 
             for (int i = 0; i < 500000; i++)
             {
-                list.add(rand.Next(0, 10));
+                int x = rand.Next(0, 10);
+                list.add(x);
+                list2.Add(x);
             }
 
             Console.WriteLine();
@@ -265,13 +268,6 @@ namespace Chunk_List
 
             var stopwatch2 = new Stopwatch();
             stopwatch2.Start();
-
-            List<int> list2 = new List<int>();
-
-            for (int i = 0; i < 500000; i++)
-            {
-                list2.Add(rand.Next(0, 10));
-            }
 
             Console.WriteLine();
             Console.WriteLine();
