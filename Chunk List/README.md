@@ -1,6 +1,5 @@
 # About
 A Chunk List is a new, concurrent, chunk-based data structure that is easily modifiable and allows for fast runtime operations.
-__NOTE__: *A chunk size of 1/10th the amount of items in the list is generally ideal for speed and efficiency*
 
 # Usage
 The __Presentation__ folder contains a presentation in PDF, PowerPoint, and XPS formats, containing the following information:
@@ -11,12 +10,12 @@ The __Presentation__ folder contains a presentation in PDF, PowerPoint, and XPS 
 
 Program files are kept within the _master_ branch.
 
-A full implementation of the class is kept within the __ChunkList.cs__ file in a namespace __Chunk_List__, to be included within the program.
+A full implementation of the class is kept within the __ChunkList.cs__ file in the namespace __Chunk_List__, to be included within the program.
 
 The __Program.cs__ file contains a benchmark test for comparison between an ArrayList (List<T>) and Chunk List.
 
 # Bugs/Features
-Bugs are tracked using the Github Issue Tracker.
+Bugs are tracked using the GitHub Issue Tracker.
 
 Please use the issue tracker for the following purpose:
   * To raise a bug request; do include specific details and label it appropriately.
