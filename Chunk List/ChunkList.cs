@@ -405,7 +405,6 @@ namespace Chunk_List
         public void print()
         {
             int cnt = 1;
-
             foreach (List<T> currentList in myList)
             {
                 Console.WriteLine("Chunk #" + cnt);
