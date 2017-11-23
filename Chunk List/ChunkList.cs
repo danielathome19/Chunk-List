@@ -319,7 +319,14 @@ namespace Chunk_List
         {
             Parallel.ForEach(myList, (currentList) =>
             {
-                currentList.RemoveAll(item => item.Equals(t));
+                for (int i = 0; i < currentList.Count; i++)
+                {
+                    if (currentList[i].Equals(t))
+                    {
+                        currentList.RemoveAt(i);
+                        i--;
+                    }
+                }
             });
         }
 

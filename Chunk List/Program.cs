@@ -295,6 +295,7 @@ namespace Chunk_List
                 if (list2[i] == 3)
                 {
                     list2.RemoveAt(i);
+                    i--;
                 }
             }
 
