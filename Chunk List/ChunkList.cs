@@ -205,12 +205,11 @@
 
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Threading.Tasks;
 
 namespace Chunk_List
 {
-    class ChunkList<T> where T : IComparable
+    public class ChunkList<T> where T : IComparable
     {
         private List<List<T>> myList;
         private int chunkSize;
