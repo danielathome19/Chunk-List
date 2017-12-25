@@ -8,6 +8,8 @@ The __Presentation__ folder contains a presentation in PDF, PowerPoint, and XPS 
   * Implementation details (construction, basic methods)
   * Complexity Analysis (Big-O)
 
+Also in the folder is the latest revision (in Word [docx] format) to the report I have created for publication.
+
 Program files are kept within the _master_ branch.
 
 A full implementation of the class is kept within the __ChunkList.cs__ file in the namespace __Chunk_List__, to be included within the program.
