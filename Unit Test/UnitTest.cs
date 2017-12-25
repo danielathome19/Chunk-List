@@ -9,6 +9,14 @@ namespace Unit_Test
     [TestClass]
     public class ChunkListTest
     {
+        public static void PrintList<T>(List<T> list)
+        {
+            foreach (T item in list)
+            {
+                Console.Write(item + " ");
+            }
+        }
+
         [TestMethod]
         public void ArrayListComparison()
         {
@@ -51,7 +59,7 @@ namespace Unit_Test
             var stopwatch2 = new Stopwatch();
             stopwatch2.Start();
             Console.WriteLine("\n\n{0}\n{1}\n{2}\n\nSize: {3}\n\n", list2.Contains(3), list2.Contains(6), list2.Contains(500), list2.Count);
-            Console.WriteLine("[Elapsed time - Chunk List] Minutes: " + stopwatch2.Elapsed.Minutes + " Seconds: " + stopwatch2.Elapsed.Seconds + "." + stopwatch2.Elapsed.Milliseconds);
+            Console.WriteLine("[Elapsed time - Array List] Minutes: " + stopwatch2.Elapsed.Minutes + " Seconds: " + stopwatch2.Elapsed.Seconds + "." + stopwatch2.Elapsed.Milliseconds);
 
             Console.WriteLine("Sorting & Removing:\n\n");
 
@@ -82,12 +90,5 @@ namespace Unit_Test
             Assert.IsTrue(time1 < time2);
         }
 
-        public static void PrintList<T>(List<T> list)
-        {
-            foreach (T item in list)
-            {
-                Console.Write(item + " ");
-            }
-        }
     }
 }
