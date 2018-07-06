@@ -22,11 +22,10 @@ namespace Unit_Test
         {
             Console.WriteLine("Starting");
 
-            var stopwatch = new Stopwatch();
-            stopwatch.Start();
 
             List<int> list2 = new List<int>();
             ChunkList<int> list = new ChunkList<int>(50000);
+            ChunkList<int> list3 = new ChunkList<int>((int)Math.Sqrt(500000));
 
             Random rand = new Random();
 
@@ -35,9 +34,13 @@ namespace Unit_Test
                 int x = rand.Next(0, 10);
                 list.add(x);
                 list2.Add(x);
+                list3.add(x);
             }
 
             #region ChunkListTest
+            var stopwatch = new Stopwatch();
+            stopwatch.Start();
+
             Console.WriteLine("\n\n{0}\n{1}\n{2}\n\nSize: {3}\n\n", list.contains(3), list.contains(6), list.contains(500), list.size());
             Console.WriteLine("[Elapsed time - Chunk List] Minutes: " + stopwatch.Elapsed.Minutes + " Seconds: " + stopwatch.Elapsed.Seconds + "." + stopwatch.Elapsed.Milliseconds);
 
@@ -51,6 +54,27 @@ namespace Unit_Test
             stopwatch.Stop();
             
             Console.WriteLine("Completely Done\n[Elapsed time - Chunk List] Minutes: " + stopwatch.Elapsed.Minutes + " Seconds: " + stopwatch.Elapsed.Seconds + "." + stopwatch.Elapsed.Milliseconds);
+            #endregion
+
+            Console.WriteLine("\n******************************************************************");
+
+
+            #region ChunkListSqrtTest
+            var stopwatch3 = new Stopwatch();
+            stopwatch3.Start();
+            Console.WriteLine("\n\n{0}\n{1}\n{2}\n\nSize: {3}\n\n", list.contains(3), list.contains(6), list.contains(500), list.size());
+            Console.WriteLine("[Elapsed time - Chunk List Sqrt] Minutes: " + stopwatch3.Elapsed.Minutes + " Seconds: " + stopwatch3.Elapsed.Seconds + "." + stopwatch3.Elapsed.Milliseconds);
+
+            Console.WriteLine("Sorting & Removing:\n\n");
+
+            list.sort();
+
+            list.remove(7);
+            list.removeAll(3);
+
+            stopwatch3.Stop();
+
+            Console.WriteLine("Completely Done\n[Elapsed time - Chunk List Sqrt] Minutes: " + stopwatch3.Elapsed.Minutes + " Seconds: " + stopwatch3.Elapsed.Seconds + "." + stopwatch3.Elapsed.Milliseconds);
             #endregion
 
             Console.WriteLine("\n******************************************************************");
@@ -81,13 +105,17 @@ namespace Unit_Test
             Console.WriteLine("Completely Done\n[Elapsed time - Array List] Minutes: " + stopwatch2.Elapsed.Minutes + " Seconds: " + stopwatch2.Elapsed.Seconds + "." + stopwatch2.Elapsed.Milliseconds);
             #endregion
 
-            Console.WriteLine();
+            Console.WriteLine("\n******************************************************************\n");
+            
             double time1 = Convert.ToDouble(stopwatch.Elapsed.Seconds.ToString() + stopwatch.Elapsed.Milliseconds.ToString().Substring(0, 2));
             double time2 = Convert.ToDouble(stopwatch2.Elapsed.Seconds.ToString() + stopwatch2.Elapsed.Milliseconds.ToString().Substring(0, 2));
-
-            Console.WriteLine(time1 < time2 ? "Chunk List ran " + Math.Round((time2 / time1), 2) + "x faster than Array List" : "Chunk List ran " + Math.Round((time1 / time2), 2) + "x slower than Array List");
+            double time3 = Convert.ToDouble(stopwatch3.Elapsed.Seconds.ToString() + stopwatch3.Elapsed.Milliseconds.ToString().Substring(0, 2));
 
             Assert.IsTrue(time1 < time2);
+
+            Console.WriteLine(time1 < time2 ? "Chunk List ran " + Math.Round((time2 / time1), 2) + "x faster than Array List" : "Chunk List ran " + Math.Round((time1 / time2), 2) + "x slower than Array List");
+            Console.WriteLine(time3 < time2 ? "Sqrt Chunk List ran " + Math.Round((time2 / time3), 2) + "x faster than Array List" : "Sqrt Chunk List ran " + Math.Round((time3 / time2), 2) + "x slower than Array List");
+            Console.WriteLine(time1 < time3 ? "Chunk List ran " + Math.Round((time3 / time1), 2) + "x faster than Sqrt Chunk List" : "Chunk List ran " + Math.Round((time1 / time3), 2) + "x slower than Sqrt Chunk List");
         }
 
     }
