@@ -10,7 +10,7 @@ namespace Unit_Test
 {
     public class ChunkListTest
     {
-        public static void PrintList<T>(List<T> list)
+        private static void PrintList<T>(List<T> list)
         {
             foreach (T item in list)
             {
