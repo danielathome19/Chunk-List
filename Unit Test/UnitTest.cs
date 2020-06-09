@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 using Chunk_List;
+// ReSharper disable HeapView.BoxingAllocation
+// ReSharper disable HeapView.ObjectAllocation.Evident
 
 namespace Unit_Test
 {
-    [TestClass]
     public class ChunkListTest
     {
         public static void PrintList<T>(List<T> list)
@@ -17,7 +18,7 @@ namespace Unit_Test
             }
         }
 
-        [TestMethod]
+        [Fact]
         public void ArrayListComparison()
         {
             Console.WriteLine("Starting");
@@ -111,7 +112,7 @@ namespace Unit_Test
             double time2 = Convert.ToDouble(stopwatch2.Elapsed.Seconds.ToString() + stopwatch2.Elapsed.Milliseconds.ToString().Substring(0, 2));
             double time3 = Convert.ToDouble(stopwatch3.Elapsed.Seconds.ToString() + stopwatch3.Elapsed.Milliseconds.ToString().Substring(0, 2));
 
-            Assert.IsTrue(time1 < time2);
+            Assert.True(time1 < time2);
 
             Console.WriteLine(time1 < time2 ? "Chunk List ran " + Math.Round((time2 / time1), 2) + "x faster than Array List" : "Chunk List ran " + Math.Round((time1 / time2), 2) + "x slower than Array List");
             Console.WriteLine(time3 < time2 ? "Sqrt Chunk List ran " + Math.Round((time2 / time3), 2) + "x faster than Array List" : "Sqrt Chunk List ran " + Math.Round((time3 / time2), 2) + "x slower than Array List");
