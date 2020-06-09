@@ -263,7 +263,9 @@ namespace Chunk_List
         /// <summary>
         /// Adds a new item to list, checks if each chunk is full until an empty one is found or created
         /// <para />
-        /// Big-O (c)
+        /// Average Case: Big-O (1)
+        /// <para />
+        /// Worst Case: Big-O (log c)
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="t">Element to be added to list</param>
@@ -287,7 +289,7 @@ namespace Chunk_List
         /// <para />
         /// Average Case: Big-O ((log c * log n) / p)
         /// <para />
-        /// Worst Case: Big-O(log c * log n)
+        /// Worst Case: Big-O (log c * log n)
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="t">Item to be removed</param>
