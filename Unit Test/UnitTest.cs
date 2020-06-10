@@ -128,7 +128,7 @@ namespace Unit_Test
             var list3 = new ChunkList<int>(1000);
             var list4 = new ChunkList<int>(2500);
             var list5 = new ChunkList<int>(5000);
-            var list6 = new ChunkList<int>(10000);
+            var list6 = new ChunkList<int>(10000); //Most successful on average
             var list7 = new ChunkList<int>(25000);
             var list8 = new ChunkList<int>(50000);
             var list9 = new ChunkList<int>(100000);
