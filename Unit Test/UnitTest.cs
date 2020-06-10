@@ -116,7 +116,7 @@ namespace Unit_Test
 
             Console.WriteLine(time1 < time2 ? "Chunk List ran " + Math.Round((time2 / time1), 2) + "x faster than Array List" : "Chunk List ran " + Math.Round((time1 / time2), 2) + "x slower than Array List");
             Console.WriteLine(time3 < time2 ? "Sqrt Chunk List ran " + Math.Round((time2 / time3), 2) + "x faster than Array List" : "Sqrt Chunk List ran " + Math.Round((time3 / time2), 2) + "x slower than Array List");
-            Console.WriteLine(time1 < time3 ? "Chunk List ran " + Math.Round((time3 / time1), 2) + "x faster than Sqrt Chunk List" : "Chunk List ran " + Math.Round((time1 / time3), 2) + "x slower than Sqrt Chunk List");
+            Console.WriteLine(time1 < time3 ? "Chunk List ran " + Math.Round((time3 / time1), 2) + "x faster than Sqrt Chunk List" : "Chunk List ran " + Math.Round((time1 / time3), 2) + "x slower than Sqrt Chunk List\n\n");
         }
 
         [Fact]
@@ -133,6 +133,7 @@ namespace Unit_Test
             var list8 = new ChunkList<int>(50000);
             var list9 = new ChunkList<int>(100000);
             var list10 = new ChunkList<int>(500000);
+            var list11 = new ChunkList<int>((int)Math.Sqrt(500000));
             
             Random rand = new Random();
 
@@ -150,6 +151,7 @@ namespace Unit_Test
                 list8.add(x);
                 list9.add(x);
                 list10.add(x);
+                list11.add(x);
             }
 
             Stopwatch Test(ChunkList<int> list)
@@ -187,13 +189,16 @@ namespace Unit_Test
                 new {chunkSize = list7.getChunkSize(), time = Test(list7)},
                 new {chunkSize = list8.getChunkSize(), time = Test(list8)},
                 new {chunkSize = list9.getChunkSize(), time = Test(list9)},
-                new {chunkSize = list10.getChunkSize(), time = Test(list10)}
+                new {chunkSize = list10.getChunkSize(), time = Test(list10)},
+                new {chunkSize = list11.getChunkSize(), time = Test(list11)}
             };
 
             foreach (var result in resultArray)
             {
                 Console.WriteLine("Result for chunk size of " + result.chunkSize + ": " + result.time.Elapsed.Minutes + " Minutes, " + result.time.Elapsed.Seconds + "." + result.time.Elapsed.Milliseconds + " Seconds");
             } 
+            
+            Console.WriteLine("Chunk size of " + (int)Math.Sqrt(500000) + " is the square-root of 500000");
         }
     }
 }
