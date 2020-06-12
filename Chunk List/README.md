@@ -8,6 +8,7 @@ The __Presentation__ folder contains a full presentation and research paper in P
   * Implementation details (construction, basic methods)
   * Complexity Analysis (Big-O)
   * Unit Testing
+  * Integration
 
 Program files are kept within the _master_ branch.
 
