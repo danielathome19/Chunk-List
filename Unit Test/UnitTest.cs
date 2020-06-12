@@ -134,8 +134,8 @@ namespace Unit_Test
             var list3 = new ChunkList<int>(1000);
             var list4 = new ChunkList<int>(2500);
             var list5 = new ChunkList<int>(5000);
-            var list6 = new ChunkList<int>(10000); //Most successful on average (2% of quantity size)
-            var list7 = new ChunkList<int>(25000);
+            var list6 = new ChunkList<int>(10000); 
+            var list7 = new ChunkList<int>(25000); //Most successful on average (5% of quantity size)
             var list8 = new ChunkList<int>(50000);
             var list9 = new ChunkList<int>(100000);
             var list10 = new ChunkList<int>(500000);
@@ -166,7 +166,7 @@ namespace Unit_Test
                 var stopwatch = new Stopwatch();
                 stopwatch.Start();
                 
-                //Console.WriteLine("\n\n{0}\n{1}\n{2}\n\nSize: {3}\n\n", list.contains(3), list.contains(6), list.contains(500), list.size());
+                Console.WriteLine("\n\n{0}\n{1}\n{2}\n\nSize: {3}\n\n", list.contains(3), list.contains(6), list.contains(500), list.size());
                 //Console.WriteLine("[Elapsed time] Minutes: " + stopwatch.Elapsed.Minutes + " Seconds: " + stopwatch.Elapsed.Seconds + "." + stopwatch.Elapsed.Milliseconds);
                 //Console.WriteLine("Sorting & Removing:\n\n");
                 
@@ -221,7 +221,7 @@ namespace Unit_Test
             for (int i = 0; i < 30; i++)
             {
                 var sampleSize = rand.Next(100, 10000);
-                var tList = new ChunkList<int>((int)(sampleSize * 0.02));
+                var tList = new ChunkList<int>((int)(sampleSize * 0.05));
                 var tList2 = new ChunkList<int>((int)(Math.Sqrt(sampleSize)));
                 
                 sampleArray.Add(sampleSize);
@@ -242,6 +242,8 @@ namespace Unit_Test
                 var stopwatch = new Stopwatch();
                 stopwatch.Start();
                 
+                Console.WriteLine("\n\n{0}\n{1}\n{2}\n\nSize: {3}\n\n", list.contains(3), list.contains(6), list.contains(500), list.size());
+
                 list.sort();
                 
                 list.remove(7);
@@ -279,7 +281,7 @@ namespace Unit_Test
             
             foreach (var result in resultListPercent)
             {
-                Console.WriteLine("Result for (chunk size of %2 of) list size of " + result.sampleSize + ": " + result.time.Elapsed.Minutes + " Minutes, " + result.time.Elapsed.Seconds + "." + result.time.Elapsed.Milliseconds + " Seconds");
+                Console.WriteLine("Result for (chunk size of 5% of) list size of " + result.sampleSize + ": " + result.time.Elapsed.Minutes + " Minutes, " + result.time.Elapsed.Seconds + "." + result.time.Elapsed.Milliseconds + " Seconds");
             } 
             
             foreach (var result in resultListSqrt)
@@ -297,7 +299,7 @@ namespace Unit_Test
                 else finResPercent++;
             }
             
-            Console.WriteLine("\nOut of 30 events, Chunk Size of 2% the Sample Size was faster {0} times", finResPercent); //More successful 2/3+ of the time on average
+            Console.WriteLine("\nOut of 30 events, Chunk Size of 5% the Sample Size was faster {0} times", finResPercent); //More successful 83+% of the time on average
             Console.WriteLine("Out of 30 events, Chunk Size of Square Root the Sample Size was faster {0} times", finResSqrt);
         }
     }
