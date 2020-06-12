@@ -289,9 +289,9 @@ namespace Chunk_List
         /// Optimized version of add, rebalances chunk size during addition. Choose between sqrt(total list size) or 5% of the total list size (Default)
         /// Adds a new item to list, checks if each chunk is full until an empty one is found or created
         /// <para />
-        /// Average Case: Big-O (C)
+        /// Average Case: Big-O (c)
         /// <para />
-        /// Worst Case: Big-O (log c * sqrt(c * n))
+        /// Worst Case: Big-O (log c * ((sqrt(c * n) * c ^ 2 * n))
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="t"></param>
