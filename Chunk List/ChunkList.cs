@@ -352,6 +352,22 @@ namespace Chunk_List
             });
         }
 
+        /// <summary>i
+        /// Optimized version of add, rebalances chunk size during addition. Choose between sqrt(total list size) or 5% of the total list size (Default)
+        /// Removes all instances of specified element in list
+        /// <para />
+        /// Average Case: Big-O (C * (log c * n) / p)
+        /// <para />
+        /// Worst Case: Big-O (c ^ 2 * Sqrt(c * n) * log c * n ^ 2)
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="t">Item to be removed</param>
+        ///<param name="optimizeSqrtSize">False by default, sets the chunk size to 5% of the total size if false or sqrt(total size) if true</param>
+        public void removeAll(T t, bool optimizeSqrtSize) {
+            removeAll(t);
+            setChunkSize(optimizeSqrtSize);
+        }
+
         /// <summary>
         /// Removes element at specified index
         /// <para />
