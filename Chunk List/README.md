@@ -2,11 +2,12 @@
 A Chunk List is a new, concurrent, chunk-based data structure that is easily modifiable and allows for fast runtime operations.
 
 # Usage
-The __Presentation__ folder contains a presentation in PDF, PowerPoint, and XPS formats, containing the following information:
+The __Presentation__ folder contains a full presentation and research paper in PDF and XPS formats, containing the following information:
   * What is a chunk list?
   * Where is a chunk list used?
   * Implementation details (construction, basic methods)
   * Complexity Analysis (Big-O)
+  * Unit Testing
 
 Program files are kept within the _master_ branch.
 

@@ -9,6 +9,8 @@
     <None Remove="App.config" />
     <None Remove="Properties\**" />
     <None Remove="Presentation\Chunk List-review01092019.pdf" />
+    <None Remove="Presentation\Chunk List.docx" />
+    <None Remove="Presentation\Chunk List.pptx" />
   </ItemGroup>
 
   <ItemGroup>
