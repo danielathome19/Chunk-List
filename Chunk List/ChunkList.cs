@@ -213,6 +213,7 @@ namespace Chunk_List
     {
         private List<List<T>> myList;
         private int chunkSize;
+        private readonly Object _lock = new Object();
 
         /// <summary>
         /// Default chunk size
@@ -301,7 +302,10 @@ namespace Chunk_List
 
                 if (indx >= 0)
                 {
-                    currentList.RemoveAt(indx);
+                    lock (_lock)
+                    {
+                        currentList.RemoveAt(indx);   
+                    }
                     state.Break();
                 }
             });
