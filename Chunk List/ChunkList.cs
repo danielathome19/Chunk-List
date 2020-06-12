@@ -286,6 +286,23 @@ namespace Chunk_List
         }
 
         /// <summary>
+        /// Optimized version of add, rebalances chunk size during addition. Choose between sqrt(total list size) or 5% of the total list size (Default)
+        /// Adds a new item to list, checks if each chunk is full until an empty one is found or created
+        /// <para />
+        /// Average Case: Big-O (C)
+        /// <para />
+        /// Worst Case: Big-O (log c * sqrt(c * n))
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="t"></param>
+        /// <param name="optimizeSqrtSize">False by default, sets the chunk size to 5% of the total size if false or sqrt(total size) if true</param>
+        public void add(T t, bool optimizeSqrtSize)
+        {
+            add(t);
+            setChunkSize(optimizeSqrtSize);
+        }
+
+        /// <summary>
         /// Removes first occurence of element to be deleted from list
         /// <para />
         /// Average Case: Big-O ((log c * log n) / p)
@@ -502,7 +519,9 @@ namespace Chunk_List
         /// <summary>
         /// Checks if list does not contain any elements
         /// <para />
-        /// Big-O (c)
+        /// Best Case: Big-O (c)
+        /// <para />
+        /// Worst Case: Big-O (sqrt(c * n)
         /// </summary>
         /// <returns></returns>
         public bool isEmpty()
@@ -536,6 +555,21 @@ namespace Chunk_List
                     add(item);
                 }
             }
+        }
+        
+        /// <summary>
+        /// Optimized version of setChunkSize, choose between sqrt(total list size) or 5% of the total list size (Default)
+        /// Modifies the list's maximum capacity per chunk and rebalances
+        /// <para />
+        /// Best Case: Big-O (c)
+        /// <para />
+        /// Worst Case: Big-O ((sqrt(c * n) * c ^ 2 * n)
+        /// </summary>
+        /// <param name="optimizeSqrtSize">False by default, sets the chunk size to 5% of the total size if false or sqrt(total size) if true</param>
+        public void setChunkSize(bool optimizeSqrtSize = false)
+        {
+            if (optimizeSqrtSize) setChunkSize((int) Math.Sqrt(size()));
+            else setChunkSize((int)(size() * 0.05));
         }
 
         /// <summary>
