@@ -1,6 +1,9 @@
 # About
 A Chunk List is a new, concurrent, chunk-based data structure that is easily modifiable and allows for fast runtime operations.
 
+To find out more, check out the provided research paper:
+  * /Chunk List/Presentation/"Chunk List.pdf" (arXiv:2101.00172)
+
 # Usage
 The __Presentation__ folder contains a full presentation and research paper in PDF and XPS formats, containing the following information:
   * What is a chunk list?
