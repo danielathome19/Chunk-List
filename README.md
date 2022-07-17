@@ -29,3 +29,17 @@ Please use the issue tracker for the following purpose:
 
 # License
 The code is licensed under Apache License 2.0.
+
+# Citation
+If you use this code for your research, please cite this project:
+```
+@software{Szelogowski_Chunk-List_2017,
+ author = {Szelogowski, Daniel},
+ doi = {10.48550/arxiv.2101.00172},
+ month = {5},
+ title = {{Chunk-List}},
+ url = {https://github.com/danielathome19/Chunk-List},
+ version = {1.0.0},
+ year = {2017}
+}
+```
