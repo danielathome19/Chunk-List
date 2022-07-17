@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Szelogowski"
+  given-names: "Daniel"
+  orcid: "https://orcid.org/0000-0002-0350-5771"
+title: "Chunk-List"
+version: 1.0.0
+doi: 10.48550/arxiv.2101.00172
+date-released: 2017-05-07
+url: "https://github.com/danielathome19/Chunk-List"
