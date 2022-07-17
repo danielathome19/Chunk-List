@@ -38,6 +38,7 @@ If you use this code for your research, please cite this project:
  doi = {10.48550/arxiv.2101.00172},
  month = {5},
  title = {{Chunk-List}},
+ license = {Apache-2.0},
  url = {https://github.com/danielathome19/Chunk-List},
  version = {1.0.0},
  year = {2017}
