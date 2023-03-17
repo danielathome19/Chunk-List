@@ -69,15 +69,15 @@ namespace Unit_Test
             #region ChunkListSqrtTest
             var stopwatch3 = new Stopwatch();
             stopwatch3.Start();
-            Console.WriteLine("\n\n{0}\n{1}\n{2}\n\nSize: {3}\n\n", list.contains(3), list.contains(6), list.contains(500), list.size());
+            Console.WriteLine("\n\n{0}\n{1}\n{2}\n\nSize: {3}\n\n", list3.contains(3), list3.contains(6), list3.contains(500), list3.size());
             Console.WriteLine("[Elapsed time - Chunk List Sqrt] Minutes: " + stopwatch3.Elapsed.Minutes + " Seconds: " + stopwatch3.Elapsed.Seconds + "." + stopwatch3.Elapsed.Milliseconds);
 
             Console.WriteLine("Sorting & Removing:\n\n");
 
-            list.sort();
+            list3.sort();
 
-            list.remove(7);
-            list.removeAll(3);
+            list3.remove(7);
+            list3.removeAll(3);
 
             stopwatch3.Stop();
 
