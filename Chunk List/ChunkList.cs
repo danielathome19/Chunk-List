@@ -352,7 +352,7 @@ namespace Chunk_List
             });
         }
 
-        /// <summary>i
+        /// <summary>
         /// Optimized version of add, rebalances chunk size during addition. Choose between sqrt(total list size) or 5% of the total list size (Default)
         /// Removes all instances of specified element in list
         /// <para />
