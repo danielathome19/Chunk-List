@@ -434,17 +434,6 @@ namespace Chunk_List
                 return get(index + 1);
             }
         }
-        
-        /// <summary>
-        /// Override indexer operator (get or set element at specified index)
-        /// </summary>
-        /// <param name="index"></param>
-        /// <returns></returns>
-        public T this[int index]
-        {
-            get { return get(index); }
-            set { set(index, value); }
-        } 
 
         /// <summary>
         /// Prints out all items currently in list, in order by chunk

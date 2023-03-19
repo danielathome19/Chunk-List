@@ -261,6 +261,3 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
-/Chunk List/Presentation/Chunk List Backup.pdf
-/.vscode
-/Chunk List/Presentation/Chunk List-review01092019.pdf
