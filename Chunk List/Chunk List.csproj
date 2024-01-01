@@ -3,6 +3,19 @@
   <PropertyGroup>
     <OutputType>Library</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Title>Chunk List</Title>
+    <Description>A Chunk List is a new, concurrent, chunk-based data structure that is easily modifiable and allows for fast run-time operations. </Description>
+    <Copyright>2017</Copyright>
+    <PackageProjectUrl>https://github.com/danielathome19/Chunk-List</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/danielathome19/Chunk-List/blob/master/LICENSE.md</PackageLicenseUrl>
+    <RepositoryUrl></RepositoryUrl>
+    <PackageTags>list, datastructures, runtime, concurrency, parallel, parallel-computing, efficiency, multithreading, speed, chunk, chunking, parallel-processing, arraylist, dynamicarray, datastorage, multiprocessing</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>danielathome19</Authors>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Company>danielathome19</Company>
+    <AssemblyName>ChunkList</AssemblyName>
+    <PackageId>ChunkList</PackageId>
   </PropertyGroup>
 
   <ItemGroup>
