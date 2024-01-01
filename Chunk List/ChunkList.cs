@@ -204,10 +204,10 @@
  */
 
 using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 
-namespace Chunk_List
+namespace ChunkList
 {
     public class ChunkList<T> where T : IComparable
     {
