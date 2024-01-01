@@ -5,7 +5,7 @@ To find out more, check out the provided research paper:
   * /Chunk List/Presentation/"Chunk List.pdf" (DOI: [10.48550/arxiv.2101.00172](https://doi.org/10.48550/arxiv.2101.00172))
 
 # Usage
-The __Presentation__ folder contains a full presentation and research paper in PDF and XPS formats, containing the following information:
+The __Presentation__ folder contains a full presentation and research paper in PDF format, containing the following information:
   * What is a chunk list?
   * Where is a chunk list used?
   * Implementation details (construction, basic methods)
@@ -15,9 +15,9 @@ The __Presentation__ folder contains a full presentation and research paper in P
 
 Program files are kept within the _master_ branch.
 
-A full implementation of the class is kept within the __ChunkList.cs__ file in the namespace __Chunk_List__, to be included within the program.
+A full implementation of the class is kept within the __ChunkList.cs__ file in the namespace __ChunkList__, to be included within the program.
 
-The __Program.cs__ file contains a benchmark test for comparison between an ArrayList (List<T>) and Chunk List.
+The __Unit Test/UnitTest.cs__ file contains a benchmark test for comparison between an ArrayList (List<T>) and Chunk List.
 
 # Bugs/Features
 Bugs are tracked using the GitHub Issue Tracker.
