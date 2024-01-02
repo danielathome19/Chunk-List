@@ -9,7 +9,24 @@ A Chunk List is a new, concurrent, chunk-based data structure that is easily mod
 To find out more, check out the provided research paper:
   * /Chunk List/Presentation/"Chunk List.pdf" (DOI: [10.48550/arxiv.2101.00172](https://doi.org/10.48550/arxiv.2101.00172))
 
+## Installation
+
+Install the [ChunkList NuGet package](https://www.nuget.org/packages/ChunkList/):
+
+```bash
+dotnet add package ChunkList
+```
+
 # Usage
+```csharp
+using ChunkList;
+
+ChunkList<int> list = new ChunkList<int>();
+for (int i = 1; i <= 100; i++)
+    list.add(i);
+list.print();
+```
+
 The __Presentation__ folder (i.e., the research paper) contains a full presentation and research paper in PDF format, containing the following information:
   * What is a chunk list?
   * Where is a chunk list used?
