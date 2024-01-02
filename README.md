@@ -1,7 +1,7 @@
 [![NuGet](https://img.shields.io/nuget/v/Chunk-List.svg)](https://www.nuget.org/packages/ChunkList/)
 [![CI/CT/CD](https://github.com/danielathome19/Chunk-List/actions/workflows/nuget_push.yml/badge.svg)](https://github.com/danielathome19/Chunk-List/actions/workflows/nuget_push.yml)
 [![License](https://img.shields.io/github/license/danielathome19/Chunk-List.svg)](https://github.com/danielathome19/Chunk-List/blob/master/LICENSE.md)
-[![DOI](https://zenodo.org/badge/DOI/10.48550/arxiv.2101.00172.svg)]([https://doi.org/10.5281/zenodo.4725317](https://doi.org/10.48550/arxiv.2101.00172))
+[![DOI](https://zenodo.org/badge/DOI/10.48550/arxiv.2101.00172.svg)](https://doi.org/10.48550/arxiv.2101.00172)
 
 # About
 A Chunk List is a new, concurrent, chunk-based data structure that is easily modifiable and allows for fast runtime operations.
